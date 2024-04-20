@@ -1,5 +1,9 @@
 pipeline {
-    agent any 
+    agent { 
+        node {
+            label 'docker-agent-alpine'
+            }
+      } 
 	environment {
 	DIRECTORY_PATH = '/home/jenkins'
 	TESTING_ENVIRONMENT = 'staging_1'
