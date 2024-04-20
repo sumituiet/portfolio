@@ -1,0 +1,41 @@
+pipeline {
+    agent any 
+	environment {
+	DIRECTORY_PATH = '/home/jenkins'
+	TESTING_ENVIRONMENT = 'staging_1'
+	PRODUCTION_ENVIRONMENT = 'prod_final'
+	}
+    stages {
+        stage('Build') { 
+            steps {
+                 echo 'fetch the source code from the directory path specified by the environment variable' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'unit tests'
+				echo 'integration tests'
+            }
+        }
+        stage('Code Quality Check') { 
+            steps {
+                echo 'check the quality of the code'
+            }
+        }
+		stage('Deploy') { 
+            steps {
+                echo 'deploy the application to a testing environment specified by the environment variable'
+            }
+        }
+		stage('Approval') { 
+            steps {
+                echo 'Hello world!'
+            }
+        }
+		stage('Deploy to Production') { 
+            steps {
+                echo 'Hello world!'
+            }
+        }
+    }
+}
