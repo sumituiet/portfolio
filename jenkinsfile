@@ -39,7 +39,7 @@ pipeline {
         }
 		stage('Deploy to Production') { 
             steps {
-		printenv TESTING_ENVIRONMENT
+		echo ' deployed at $TESTING_ENVIRONMENT'
                 echo 'Hello world!'
             }
         }
