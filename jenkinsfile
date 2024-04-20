@@ -33,7 +33,8 @@ pipeline {
         }
 		stage('Approval') { 
             steps {
-                echo 'Hello world!'
+		echo 'sleep 10'
+                echo 'Approved'
             }
         }
 		stage('Deploy to Production') { 
