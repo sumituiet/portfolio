@@ -1,9 +1,5 @@
 pipeline {
-    agent { 
-        node {
-            label any
-            }
-      } 
+    agent any
 	environment {
 	DIRECTORY_PATH= "/home/jenkins"
 	TESTING_ENVIRONMENT= "staging_1"
