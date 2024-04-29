@@ -2,7 +2,7 @@ pipeline {
     agent any
 	environment {
 	DIRECTORY_PATH= "/home/jenkins"
-	TESTING_ENVIRONMENT= "staging_1"
+	TESTING_ENVIRONMENT= "staging"
 	PRODUCTION_ENVIRONMENT= "prod_final"
 	}
     stages {
