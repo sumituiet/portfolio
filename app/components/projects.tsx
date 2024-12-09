@@ -6,7 +6,7 @@ export default function Projects() {
             <h1 className="font-semibold text-2xl tracking-tighter pb-4">Projects:</h1>
             <div className="grid grid-cols-2 gap-2">
                 <div className="max-w-sm rounded overflow-hidden shadow-2xl ">
-                    <Image className="w-full" src="/image.png" alt="Moola" />
+                    <Image className="w-full" src="/image.png" alt="Moola" width={200} height={200} />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Moola - Financial Literacy App</div>
                         <p className=" text-base">
@@ -21,7 +21,7 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="max-w-sm rounded overflow-hidden shadow-2xl ">
-                    <Image className="w-full h-40 bg-white" src="/ollama.svg" alt="Moola" />
+                    <Image className="w-full h-40 bg-white" src="/ollama.svg" alt="Moola" height={200} width={200}/>
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Interfacing LLMs and Unsloth model training </div>
                         <p className=" text-base">
