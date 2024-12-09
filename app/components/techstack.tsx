@@ -53,7 +53,7 @@ export default function TechStack() {
             <span>MySQL</span>
           </div>
           <div className="flex flex-col items-center transition-colors duration-300 hover:bg-gray-200 hover:text-black  p-4 rounded-lg hover:animate-[wiggle_1s_ease-in-out_infinite] ">
-            <Image src="/ollama.svg" alt="Ollama" width={75} height={75}/>
+            <Image src="/portfolio/ollama.svg" alt="Ollama" width={75} height={75}/>
             <span>Ollama</span>
           </div>
         </div>

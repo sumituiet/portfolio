@@ -7,7 +7,7 @@ export default function Hero() {
                 <div className="relative inline-block">
                     <div className="relative size-[70px] hover:saturate-[70%]">
                         <div className="absolute inset-1">
-                            <Image className="size-full rounded-full bg-muted-foreground/30 object-cover" alt="Profile" src="/sumit_ai.jpg" width={200} height={200}/>
+                            <Image className="size-full rounded-full bg-muted-foreground/30 object-cover" alt="Profile" src="/portfolio/sumit_ai.jpg" width={200} height={200}/>
                         </div>
                     </div>
                 </div>
