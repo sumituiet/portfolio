@@ -21,7 +21,7 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div>
-                        <h1 className="block font-bold font-mono text-2xl sm:hidden">DL</h1>
+                        <h1 className="block font-bold font-mono text-2xl sm:hidden">Sumit</h1>
                     </div>
                 </Link>
                 <div className="flex items-center">
