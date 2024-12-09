@@ -1,14 +1,13 @@
 "use client"
 
-import { GrGithub } from "react-icons/gr";
 import ThemeSwitch from "./theme-switch";
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-
+import { BsGithub,  BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 export default function Navbar() {
     return (
         <div>
             <nav className="relative flex scroll-pr-6 items-center justify-end px-0 pb-0 md:relative md:overflow-auto">
-                <a href="/" className="pl-2 first:mr-auto">
+                <Link href="/" className="pl-2 first:mr-auto">
                     <div className="hidden sm:block">
                         <div className="flex scale-100 overflow-hidden py-2 space-x-1">
                             {['S', 'U', 'M', 'I', 'T'].map((letter, index) => (
@@ -24,7 +23,7 @@ export default function Navbar() {
                     <div>
                         <h1 className="block font-bold font-mono text-2xl sm:hidden">DL</h1>
                     </div>
-                </a>
+                </Link>
                 <div className="flex items-center">
                     <a data-id="github" type="button" className="relative flex items-center justify-center px-2 py-0.5 text-center text-lg hover:text-primary/85" href="https://github.com/sumituiet"><BsGithub size={30}/>
                     </a>

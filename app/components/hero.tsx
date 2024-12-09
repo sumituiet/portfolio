@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
     return (
         <div className="py-8">
@@ -5,12 +7,12 @@ export default function Hero() {
                 <div className="relative inline-block">
                     <div className="relative size-[70px] hover:saturate-[70%]">
                         <div className="absolute inset-1">
-                            <img className="size-full rounded-full bg-muted-foreground/30 object-cover" alt="Profile" src="/sumit_ai.jpg" />
+                            <Image className="size-full rounded-full bg-muted-foreground/30 object-cover" alt="Profile" src="/sumit_ai.jpg" />
                         </div>
                     </div>
                 </div>
                 <div className="space-y-1">
-                    <h1 className="font-semibold text-2xl tracking-tighter">Hey, I'm Sumit
+                    <h1 className="font-semibold text-2xl tracking-tighter">Hey, I&apos;m Sumit
                         <span className="ml-1 inline-block origin-bottom-right hover:animate-wave">👋
                         </span>
                     </h1>
