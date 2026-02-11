@@ -16,7 +16,8 @@ export default function Hero() {
                         <span className="ml-1 inline-block origin-bottom-right hover:animate-wave">👋
                         </span>
                     </h1>
-                    <a href="mailto:Sumitsaini341@gmail.com" rel="noopener noreferrer" target="_blank" className="flex items-center gap-1.5">
+                    <p className="text-sm text-muted-foreground">Melbourne, Victoria | <a href="tel:+61406618080" className="hover:text-primary">+61 406 618 080</a></p>
+                    <a href="mailto:sumit341@icloud.com" rel="noopener noreferrer" target="_blank" className="flex items-center gap-1.5">
                         <div className="relative cursor-pointer overflow-hidden">                            
                             <p className="group text-muted-foreground">
                                 <span className="group-hover:-translate-y-full flex flex-col border-b border-dashed transition-all duration-1000 ease-slow">Available for work
