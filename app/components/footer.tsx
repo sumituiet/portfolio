@@ -1,6 +1,8 @@
 import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Footer() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <footer className="footer">
       <div>
@@ -15,7 +17,7 @@ export default function Footer() {
         <div>
           <a href="https://github.com/sumituiet" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/sumituiet/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="/Sumit-Resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
+          <a href={`${basePath}/Sumit-Resume.pdf`} target="_blank" rel="noreferrer">Résumé</a>
         </div>
       </div>
     </footer>

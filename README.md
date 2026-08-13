@@ -28,3 +28,7 @@ The included `render.yaml` configures a Render Static Site automatically. When c
 - Node version: 20 or newer
 
 No environment variables, server runtime, or rewrite rules are required.
+
+## GitHub Pages
+
+The included GitHub Actions workflow reads the repository base path from GitHub Pages and passes it into the static build automatically. This keeps images, résumé links, and Next.js assets working when the site is hosted under `/portfolio`, while Render continues to serve them from `/`.

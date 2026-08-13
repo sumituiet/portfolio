@@ -2,6 +2,8 @@ import Image from "next/image";
 import { FiArrowDownRight, FiArrowUpRight, FiMapPin } from "react-icons/fi";
 
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section id="top" className="hero-grid scroll-mt-28 pb-20 pt-6 sm:pb-28 sm:pt-10">
       <div className="max-w-3xl">
@@ -32,7 +34,7 @@ export default function Hero() {
       <aside className="hero-card" aria-label="About Sumit">
         <div className="relative overflow-hidden rounded-[1.35rem] bg-slate-200 dark:bg-slate-800">
           <Image
-            src="/sumit_ai.jpg"
+            src={`${basePath}/sumit_ai.jpg`}
             width={680}
             height={680}
             priority
