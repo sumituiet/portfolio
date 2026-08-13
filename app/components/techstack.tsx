@@ -1,43 +1,47 @@
-export default function TechStack() {
-  const skillGroups = [
-    {
-      title: "Data Platforms",
-      skills: ["Snowflake", "Databricks", "SQL", "ETL", "Kafka", "Power BI", "SAP BW"],
-    },
-    {
-      title: "AI and GenAI",
-      skills: ["LangChain", "LangGraph", "Machine Learning", "RAG Pipelines", "vLLM", "OCR Systems"],
-    },
-    {
-      title: "Engineering and Ops",
-      skills: ["Docker", "Git", "API Modernization", "Release Checklists", "Test Plans", "CI/CD"],
-    },
-    {
-      title: "Cloud and Tools",
-      skills: ["Azure AI Foundry", "n8n", "Matillion ETL", "Data Orchestration"],
-    },
-  ];
+const groups = [
+  {
+    label: "Generative AI",
+    title: "Agents that reason, retrieve, and act.",
+    skills: ["RAG", "Multi-agent systems", "Azure AI Foundry", "Ollama", "LoRA / QLoRA"],
+    accent: "violet",
+  },
+  {
+    label: "Data engineering",
+    title: "Pipelines designed for real operating scale.",
+    skills: ["Snowflake", "Databricks", "Kafka", "Airflow", "SQL", "Matillion"],
+    accent: "blue",
+  },
+  {
+    label: "Production systems",
+    title: "Observable from first experiment to deployment.",
+    skills: ["MLflow", "FastAPI", "Docker", "CI/CD", "Model monitoring"],
+    accent: "green",
+  },
+];
 
+export default function TechStack() {
   return (
-    <div className="py-8">
-      <h1 className="pb-4 text-2xl font-semibold tracking-tighter">Key Skills</h1>
-      <div className="grid gap-4 md:grid-cols-2">
-        {skillGroups.map((group) => (
-          <section key={group.title} className="rounded-lg border border-muted-foreground/20 p-4">
-            <h2 className="pb-3 text-lg font-semibold">{group.title}</h2>
-            <div className="flex flex-wrap gap-2">
-              {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-muted-foreground/30 px-3 py-1 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-                >
-                  {skill}
-                </span>
-              ))}
+    <section className="section-block" aria-labelledby="capabilities-title">
+      <div className="section-heading">
+        <div>
+          <p className="section-kicker">Capabilities</p>
+          <h2 id="capabilities-title">From prototype to production.</h2>
+        </div>
+        <p>I work across the complete AI product lifecycle, with a bias toward dependable systems and measurable outcomes.</p>
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-3">
+        {groups.map((group, index) => (
+          <article key={group.label} className={`skill-card accent-${group.accent}`}>
+            <span className="card-index">0{index + 1}</span>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-muted">{group.label}</p>
+            <h3>{group.title}</h3>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {group.skills.map((skill) => <span className="tag" key={skill}>{skill}</span>)}
             </div>
-          </section>
+          </article>
         ))}
       </div>
-    </div>
-  )
+    </section>
+  );
 }

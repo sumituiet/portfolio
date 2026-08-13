@@ -1,42 +1,59 @@
 import Image from "next/image";
+import { FiArrowDownRight, FiArrowUpRight, FiMapPin } from "react-icons/fi";
 
 export default function Hero() {
-    return (
-        <div className="py-8">
-            <div className="mb-6 flex gap-5">
-                <div className="relative inline-block">
-                    <div className="relative size-[70px] hover:saturate-[70%]">
-                        <div className="absolute inset-1">
-                            <Image className="size-full rounded-full bg-muted-foreground/30 object-cover" alt="Profile" src="/portfolio/sumit_ai.jpg" width={200} height={200}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="space-y-1">
-                    <h1 className="font-semibold text-2xl tracking-tighter">Hey, I&apos;m Sumit
-                        <span className="ml-1 inline-block origin-bottom-right hover:animate-wave">👋
-                        </span>
-                    </h1>
-                    <p className="text-sm text-muted-foreground">Melbourne, Victoria | <a href="tel:+61406618080" className="hover:text-primary">+61 406 618 080</a></p>
-                    <a href="mailto:sumit341@icloud.com" rel="noopener noreferrer" target="_blank" className="flex items-center gap-1.5">
-                        <div className="relative cursor-pointer overflow-hidden">                            
-                            <p className="group text-muted-foreground">
-                                <span className="group-hover:-translate-y-full flex flex-col border-b border-dashed transition-all duration-1000 ease-slow">Available for work
-                                    <span className="invisible h-0"> Reach out </span>
-                                </span>
-                                <span className="group-hover:-translate-y-full absolute top-full flex items-center transition-all duration-1000 ease-slow">Reach out
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 size-4">
-                                        <rect width="20" height="16" x="2" y="4" rx="2">
-                                        </rect>
-                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
+  return (
+    <section id="top" className="hero-grid scroll-mt-28 pb-20 pt-6 sm:pb-28 sm:pt-10">
+      <div className="max-w-3xl">
+        <div className="eyebrow mb-7">
+          <span className="status-dot" />
+          Available for ambitious AI work
         </div>
-    )
+
+        <h1 className="text-balance text-[clamp(3.2rem,9vw,7.7rem)] font-semibold leading-[0.88] tracking-[-0.07em]">
+          I build AI that
+          <span className="hero-gradient block pb-2">earns its place.</span>
+        </h1>
+
+        <p className="mt-7 max-w-2xl text-balance text-lg leading-8 text-muted sm:text-xl">
+          I&apos;m Sumit, an AI Engineer turning complex data, enterprise systems, and language models into useful products that work in the real world.
+        </p>
+
+        <div className="mt-9 flex flex-wrap gap-3">
+          <a href="#work" className="button-primary">
+            Explore my work <FiArrowDownRight aria-hidden="true" />
+          </a>
+          <a href="mailto:sumit341@icloud.com" className="button-secondary">
+            Start a conversation <FiArrowUpRight aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <aside className="hero-card" aria-label="About Sumit">
+        <div className="relative overflow-hidden rounded-[1.35rem] bg-slate-200 dark:bg-slate-800">
+          <Image
+            src="/sumit_ai.jpg"
+            width={680}
+            height={680}
+            priority
+            className="aspect-square w-full object-cover object-top grayscale transition duration-700 hover:grayscale-0"
+            alt="Portrait of Sumit"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 to-transparent px-5 pb-5 pt-16 text-white">
+            <p className="flex items-center gap-2 text-sm"><FiMapPin /> Melbourne, Australia</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-3 pt-4">
+          <div className="metric-card">
+            <strong>5+</strong>
+            <span>years building</span>
+          </div>
+          <div className="metric-card">
+            <strong>1M</strong>
+            <span>AI requests / day</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+  );
 }

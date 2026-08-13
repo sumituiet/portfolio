@@ -16,8 +16,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sumit",
-  description: "Data engineer",
+  title: "Sumit — AI Engineer",
+  description: "AI Engineer in Melbourne building production GenAI products, agents, RAG pipelines, and data platforms.",
+  keywords: ["AI Engineer", "GenAI", "RAG", "Data Engineering", "Melbourne"],
 };
 
 export default function RootLayout({
@@ -28,15 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased` +" bg-white text-black dark:bg-gray-900 dark:text-gray-100 "}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <main className="relative mx-auto mt-6 max-w-3xl px-6">
+          <main className="relative mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
             <Navbar />
-          {children}
+            {children}
           </main>
         </Providers>
-
       </body>
     </html>
   );

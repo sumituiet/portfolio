@@ -1,38 +1,55 @@
-"use client"
+"use client";
 
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import ThemeSwitch from "./theme-switch";
-import { BsGithub,  BsLinkedin } from "react-icons/bs";
-import Link from "next/link";
-export default function Navbar() {
-    return (
-        <div>
-            <nav className="relative flex scroll-pr-6 items-center justify-end px-0 pb-0 md:relative md:overflow-auto">
-                <Link href="/" className="pl-2 first:mr-auto">
-                    <div className="hidden sm:block">
-                        <div className="flex scale-100 overflow-hidden py-2 space-x-1">
-                            {['S', 'U', 'M', 'I', 'T'].map((letter, index) => (
-                                <h1
-                                    key={index}
-                                    className="font-mono font-bold text-2xl transition-transform duration-500 hover:scale-125"
-                                >
-                                    {letter}
-                                </h1>
-                            ))}
-                        </div>
-                    </div>
-                    <div>
-                        <h1 className="block font-bold font-mono text-2xl sm:hidden">Sumit</h1>
-                    </div>
-                </Link>
-                <div className="flex items-center">
-                    <a data-id="github" type="button" className="relative flex items-center justify-center px-2 py-0.5 text-center text-lg hover:text-primary/85" href="https://github.com/sumituiet"><BsGithub size={30}/>
-                    </a>
-                    <a data-id="linkedin" type="button" className="relative flex items-center justify-center px-2 py-0.5 text-center text-lg hover:text-primary/85" href="https://www.linkedin.com/in/sumituiet/"><BsLinkedin size={30}/>
-                    </a>
-                    <ThemeSwitch />
-                </div>
-            </nav>
 
+const links = [
+  { label: "Work", href: "#work" },
+  { label: "Experience", href: "#experience" },
+  { label: "AI demo", href: "#ai-demo" },
+];
+
+export default function Navbar() {
+  return (
+    <header className="sticky top-4 z-50 mb-8 sm:mb-14">
+      <nav
+        aria-label="Primary navigation"
+        className="glass-panel flex items-center justify-between rounded-2xl px-3 py-2 shadow-lg shadow-slate-950/[0.04]"
+      >
+        <a href="#top" className="rounded-xl px-2 py-1 font-mono text-sm font-bold tracking-[0.18em]">
+          SUMIT<span className="text-accent">.</span>
+        </a>
+
+        <div className="hidden items-center gap-1 md:flex">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="nav-link">
+              {link.label}
+            </a>
+          ))}
         </div>
-    );
+
+        <div className="flex items-center gap-1">
+          <a
+            aria-label="GitHub profile"
+            className="icon-button"
+            href="https://github.com/sumituiet"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub aria-hidden="true" />
+          </a>
+          <a
+            aria-label="LinkedIn profile"
+            className="icon-button"
+            href="https://www.linkedin.com/in/sumituiet/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsLinkedin aria-hidden="true" />
+          </a>
+          <ThemeSwitch />
+        </div>
+      </nav>
+    </header>
+  );
 }
