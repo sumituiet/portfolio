@@ -182,7 +182,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .tag { position: relative; z-index: 1; border: 1px solid var(--border); border-radius: 999px; padding: .42rem .68rem; color: var(--muted); background: color-mix(in srgb, var(--surface) 75%, transparent); font-size: .75rem; font-weight: 600; }
 
 .experience-list { border-top: 1px solid var(--border); }
-.experience-row { display: grid; grid-template-columns: 3rem 1.05fr 1.4fr .85fr; gap: 1.8rem; align-items: start; border-bottom: 1px solid var(--border); padding: 2rem 0; }
+.experience-row { display: grid; grid-template-columns: 3rem 1.05fr 1.4fr .85fr; gap: 1.8rem; align-items: start; border-bottom: 1px solid var(--border); padding: 2.4rem 0; }
 .experience-number { color: var(--muted); font-family: var(--font-geist-mono); font-size: .75rem; }
 .experience-row h3 { font-size: 1.15rem; font-weight: 700; }
 .company-line { margin-top: .3rem; color: var(--muted); font-size: .83rem; }.company-line span { margin: 0 .25rem; }
@@ -191,6 +191,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .experience-end time { display: block; margin-bottom: .7rem; font-family: var(--font-geist-mono); font-size: .75rem; font-weight: 700; }
 .experience-end div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem; }
 .experience-end span { border-radius: .4rem; padding: .25rem .4rem; color: var(--muted); background: var(--surface-soft); font-size: .65rem; }
+.experience-details { display: grid; grid-column: 2 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 2rem; border-top: 1px solid var(--border); padding-top: 1.4rem; }
+.experience-details li { position: relative; padding-left: 1rem; color: var(--muted); font-size: .82rem; line-height: 1.6; }
+.experience-details li::before { position: absolute; top: .65em; left: 0; width: .3rem; height: .3rem; content: ""; border-radius: 50%; background: var(--accent); }
 
 .demo-wrap { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(2rem, 6vw, 6rem); overflow: hidden; border-radius: 2rem; padding: clamp(1.5rem, 5vw, 4.5rem); color: #f4f7f2; background: #111612; }
 .demo-intro h2 { margin: 1rem 0 1.25rem; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 600; line-height: .95; letter-spacing: -.06em; }
@@ -233,7 +236,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (max-width: 900px) {
   .hero-grid { gap: 2.5rem; grid-template-columns: 1fr 15rem; }
   .project-card { grid-template-columns: 1fr; }.project-visual { min-height: 24rem; }.project-meta { margin-top: 2rem; }
-  .experience-row { grid-template-columns: 2rem 1fr 1.5fr; }.experience-end { grid-column: 2 / -1; display: flex; align-items: center; justify-content: space-between; text-align: left; }.experience-end time { margin: 0; }.experience-end div { justify-content: flex-end; }
+  .experience-row { grid-template-columns: 2rem 1fr 1.5fr; }.experience-end { grid-column: 2 / -1; display: flex; align-items: center; justify-content: space-between; text-align: left; }.experience-end time { margin: 0; }.experience-end div { justify-content: flex-end; }.experience-details { grid-column: 2 / -1; }
   .demo-wrap { grid-template-columns: 1fr; }.demo-intro { max-width: 37rem; }
 }
 
@@ -242,7 +245,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .section-block { padding: 4.5rem 0; }.section-heading { grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 2.2rem; }
   .project-card { min-height: 0; border-radius: 1.4rem; }.project-visual { min-height: 19rem; padding: 1.3rem; }.project-meta { grid-template-columns: 1fr; }
   .visual-moola { gap: 1rem; padding: 1.5rem; }.donut { width: 6rem; height: 6rem; }.chart-copy strong { font-size: 2.3rem; }
-  .experience-row { grid-template-columns: 2rem 1fr; gap: 1rem; }.experience-summary, .experience-end { grid-column: 2; }.experience-end { display: block; }.experience-end time { margin-bottom: .7rem; }.experience-end div { justify-content: flex-start; }
+  .experience-row { grid-template-columns: 2rem 1fr; gap: 1rem; }.experience-summary, .experience-end { grid-column: 2; }.experience-end { display: block; }.experience-end time { margin-bottom: .7rem; }.experience-end div { justify-content: flex-start; }.experience-details { grid-column: 2; grid-template-columns: 1fr; gap: .65rem; }
   .demo-wrap { border-radius: 1.4rem; }.chat-window { min-height: 32rem; }.demo-label { display: none; }
   .chat-contact-links { padding-left: 0; }
   .education-card { grid-template-columns: 1fr auto; gap: 1.5rem; }.education-card > p { grid-column: 1 / -1; }
